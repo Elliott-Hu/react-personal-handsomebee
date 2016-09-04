@@ -4,6 +4,7 @@ var BellOnBundlerErrorPlugin = require('bell-on-bundler-error-plugin');
 module.exports = {
   entry:{
     index:"./index.js",
+    style:"./style.css",
     vendor:[
       "react",
       "react-dom",
@@ -23,6 +24,9 @@ module.exports = {
       query:{
         presets:["es2015","stage-2","react"],
       }
+    },{
+      test:/\.css$/,
+      loader:"style!css",
     }]
   },
   plugins:[

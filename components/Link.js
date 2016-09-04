@@ -6,7 +6,7 @@ const Link = ({ active, children, onClick }) => {
   }
 
   return (
-    <a href="#"
+    <a className="link_tab" href="#"
        onClick={e => {
          e.preventDefault()
          onClick()
