@@ -7,5 +7,4 @@ webpack-dev-server
 
 工程启动之后打开 localhost:8080 就可以看到效果
 
---感谢知乎react专栏
 --感谢@leanklass
