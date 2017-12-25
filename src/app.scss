@@ -1,0 +1,6 @@
+.app {
+  &:before {
+    content: "这是伪类";
+    color: red;
+  }
+}

@@ -1,40 +1,35 @@
-var webpack = require("webpack");
-var BellOnBundlerErrorPlugin = require('bell-on-bundler-error-plugin');
+const path = require('path');
+const webpack = require("webpack");
 
-module.exports = {
-  entry:{
-    index:"./index.js",
-    style:"./style.css",
-    vendor:[
-      "react",
-      "react-dom",
-      "react-redux",
-      "redux",
-    ]
+const config = {
+  entry: { 
+    bundle: "./src/app.js",
+    vendors: ["react", "react-dom", "redux", "react-redux"]
   },
-  output:{
-    path:"./",
-    filename:"[name]"+"dist.js"
+  output: {
+    filename: "[name].js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist"
   },
-  module:{
-    loaders:[{
+  module: {
+    rules: [{
       test:/\.js$/,
-      excluce:/node_modules/,
-      loader:"babel",
+      exclude:/node_modules/,
+      loaders: "babel-loader",
       query:{
-        presets:["es2015","stage-2","react"],
+        presets:["env", "react"],
       }
-    },{
-      test:/\.css$/,
-      loader:"style!css",
+    }, {
+      test: /\.scss|\.css$/,
+      exclude:/node_modules/,
+      loaders: ['style-loader', 'css-loader', 'sass-loader'
+      // , 'postcss-loader'
+      ]
     }]
   },
-  plugins:[
-    new BellOnBundlerErrorPlugin(),
-    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js"),
-    new webpack.HotModuleReplacementPlugin()],
-  devServer:{
-    hot:true,
-    inline:true,
-  }
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }
+
+module.exports = config;
