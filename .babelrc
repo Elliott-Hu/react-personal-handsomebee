@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    ["module-alias", [
+      { "src": "./src/utils", "expose": "@utils" },
+      { "src": "./src/components", "expose": "@components" },
+      { "src": "./src/containers", "expose": "@containers" },
+      { "src": "./src/constants", "expose": "@constants" },
+      { "src": "./src/reducers", "expose": "@reducers" },
+      { "src": "./src/actions", "expose": "@actions" },
+    ]]
+  ]
+}

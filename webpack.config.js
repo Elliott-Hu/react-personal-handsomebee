@@ -1,10 +1,9 @@
 const path = require('path');
-const webpack = require("webpack");
 
 const config = {
   entry: { 
     bundle: "./src/app.js",
-    vendors: ["react", "react-dom", "redux", "react-redux"]
+    vendors: ["babel-polyfill", "react", "react-dom", "redux", "react-redux"]
   },
   output: {
     filename: "[name].js",
@@ -17,7 +16,7 @@ const config = {
       exclude:/node_modules/,
       loaders: "babel-loader",
       query:{
-        presets:["env", "react"],
+        presets:["stage-0", "env", "react"],
       }
     }, {
       test: /\.scss|\.css$/,
@@ -27,9 +26,6 @@ const config = {
       ]
     }]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
 }
 
 module.exports = config;

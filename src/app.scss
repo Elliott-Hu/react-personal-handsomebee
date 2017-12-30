@@ -1,4 +1,5 @@
 .app {
+  min-height: 100%;
   &:before {
     content: "这是伪类";
     color: red;
