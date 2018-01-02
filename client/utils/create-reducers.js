@@ -3,5 +3,5 @@ export default function(initialState, actionHandlers) {
     const reduceFn = actionHandlers[action.type];
     if (!reduceFn) return state;
     return { ...state, ...reduceFn(state, action) };
-  }
+  };
 }

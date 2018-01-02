@@ -5,4 +5,4 @@ import todos from "./todos";
 const reducers = { hello, todos };
 
 
-export default combineReducers(reducers)
+export default combineReducers(reducers);

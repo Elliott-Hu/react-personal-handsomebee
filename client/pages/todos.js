@@ -4,7 +4,7 @@ import HelloContainer from "@containers/hello";
 
 export default class PageTodos extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
@@ -12,6 +12,6 @@ export default class PageTodos extends React.Component {
         <HelloContainer />
         <TodoContainer />
       </div>
-    )
+    );
   }
 }

@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require("path");
 
 const config = {
   entry: { 
     bundle: "./client/app.js",
-    vendors: ["babel-polyfill", "react", "react-dom", "redux", "react-redux"]
+    vendors: ["babel-polyfill", "react", "react-dom", "prop-types", "redux", "react-redux"]
   },
   output: {
     filename: "[name].js",
@@ -21,11 +21,11 @@ const config = {
     }, {
       test: /\.scss|\.css$/,
       exclude:/node_modules/,
-      loaders: ['style-loader', 'css-loader', 'sass-loader'
+      loaders: ["style-loader", "css-loader", "sass-loader"
       // , 'postcss-loader'
       ]
     }]
   },
-}
+};
 
 module.exports = config;

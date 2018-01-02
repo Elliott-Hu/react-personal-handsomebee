@@ -1,4 +1,4 @@
-require('./app.scss');
+require("./app.scss");
 
 import React from "react";
 import ReactDom from "react-dom";
@@ -16,11 +16,11 @@ class App extends React.Component {
     return (<div className={ "app" }>
       @@@@ hello react tsx welcome
       <PageTodos />
-    </div>)
+    </div>);
   }
 }
 
 ReactDom.render(
   <Provider store={ store }><App /></Provider>,
   document.getElementById("root")
-)
+);
