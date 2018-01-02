@@ -3,7 +3,7 @@ const path = require("path");
 const config = {
   entry: { 
     bundle: "./client/app.js",
-    vendors: ["babel-polyfill", "react", "react-dom", "prop-types", "redux", "react-redux"]
+    vendors: ["babel-polyfill", "react", "react-dom", "prop-types", "redux", "react-redux", "classnames"]
   },
   output: {
     filename: "[name].js",
@@ -20,7 +20,7 @@ const config = {
       }
     }, {
       test: /\.scss|\.css$/,
-      exclude:/node_modules/,
+      // exclude:/node_modules/,
       loaders: ["style-loader", "css-loader", "sass-loader"
       // , 'postcss-loader'
       ]

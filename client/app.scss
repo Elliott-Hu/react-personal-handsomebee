@@ -1,7 +1,13 @@
 .app {
+  width: 310px;
+  margin: 60px auto 0;
   min-height: 100%;
   &:before {
     content: "这是伪类";
     color: red;
   }
+}
+
+p {
+  margin: 0;
 }

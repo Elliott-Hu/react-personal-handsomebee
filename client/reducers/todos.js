@@ -2,6 +2,7 @@ import createReducer from "@utils/create-reducers";
 import * as constants from "@constants";
 
 import _filter from "lodash/filter";
+import _findIndex from "lodash/findIndex";
 
 let initialState = {
   list: [],
@@ -18,8 +19,9 @@ let actionHandlers = {
     state.list = _filter(state.list, item => item.id != action.id);
     return state;
   },
-  [constants.todos.TOGGLE_TODO]: (state, aciton) => {
-    console.log(state, aciton);
+  [constants.todos.TOGGLE_TODO]: (state, action) => {
+    let idx = _findIndex(state.list, item => item.id == action.id);
+    state.list[idx].done = !state.list[idx].done;
     return state;
   }
 };

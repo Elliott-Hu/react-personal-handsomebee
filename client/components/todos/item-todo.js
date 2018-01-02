@@ -1,3 +1,5 @@
+require("./item-todo.scss");
+
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -19,7 +21,7 @@ export default class Todo extends React.Component {
   render() {
     const { tip } = this.props;
     return (
-      <div onClick={ this.handleClickToggle }>
+      <div className="item-todo" onClick={ this.handleClickToggle }>
         <p>{ tip }</p>
         <a onClick={ this.handleClickRemove }>x</a>
       </div>
