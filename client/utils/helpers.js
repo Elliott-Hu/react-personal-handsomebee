@@ -1,7 +1,7 @@
 /**
  * 简化mapDispatchToProps
  * 
- * @param {any} actions 
+ * @param {Object} actions 
  * @returns {Function} [mapDispatchToProps];
  */
 
@@ -12,14 +12,12 @@ export const mapDispatchToProps = actions => {
     }).reduce((prev, reducer) => {
       return Object.assign(prev, { 
         [reducer[0]]: Object.keys(reducer[1]).reduce((handlers, handler) => {
-          return Object.assign(handlers, { [handler]: () => {
-            dispatch(reducer[1][handler]());
+          return Object.assign(handlers, { [handler]: (...args) => {
+            dispatch(reducer[1][handler](...args));
           } })
         }, {})
       })
-
     }, {})
-    console.log(result);
     return result;
   }
 }

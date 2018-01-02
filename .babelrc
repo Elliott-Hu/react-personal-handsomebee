@@ -1,12 +1,13 @@
 {
   "plugins": [
     ["module-alias", [
-      { "src": "./src/utils", "expose": "@utils" },
-      { "src": "./src/components", "expose": "@components" },
-      { "src": "./src/containers", "expose": "@containers" },
-      { "src": "./src/constants", "expose": "@constants" },
-      { "src": "./src/reducers", "expose": "@reducers" },
-      { "src": "./src/actions", "expose": "@actions" },
+      { "src": "./client/utils", "expose": "@utils" },
+      { "src": "./client/pages", "expose": "@pages" },
+      { "src": "./client/containers", "expose": "@containers" },
+      { "src": "./client/components", "expose": "@components" },
+      { "src": "./client/constants", "expose": "@constants" },
+      { "src": "./client/reducers", "expose": "@reducers" },
+      { "src": "./client/actions", "expose": "@actions" },
     ]]
   ]
 }

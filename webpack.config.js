@@ -2,7 +2,7 @@ const path = require('path');
 
 const config = {
   entry: { 
-    bundle: "./src/app.js",
+    bundle: "./client/app.js",
     vendors: ["babel-polyfill", "react", "react-dom", "redux", "react-redux"]
   },
   output: {

@@ -7,7 +7,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import reducers from "@reducers";
-import TodoContainer from "@containers/todoContainer";
+import PageTodos from "@pages/todos";
 
 let store = createStore(reducers);
 
@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (<div className={ "app" }>
       @@@@ hello react tsx welcome
-      <TodoContainer />
+      <PageTodos />
     </div>)
   }
 }
