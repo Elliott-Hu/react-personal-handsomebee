@@ -1,0 +1,20 @@
+@import '../../assets/scss/mixin';
+
+.todos-filters {
+  @include border-box();
+  @include clearfix();
+  text-align: center;
+  margin: 10px 0;
+  >div {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    &.is-active {
+      color: #69be87;
+      cursor: default;
+    }
+  }
+}

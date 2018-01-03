@@ -2,6 +2,7 @@ require("./item-todo.scss");
 
 import React from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 
 export default class Todo extends React.Component {
   constructor(props) {
@@ -19,9 +20,13 @@ export default class Todo extends React.Component {
     handleToggle(id);
   }
   render() {
-    const { tip } = this.props;
+    const { tip, done } = this.props;
+    const className = cx({
+      "item-todo": true,
+      "is-done": done
+    });
     return (
-      <div className="item-todo" onClick={ this.handleClickToggle }>
+      <div className={ className } onClick={ this.handleClickToggle }>
         <p>{ tip }</p>
         <a onClick={ this.handleClickRemove }>x</a>
       </div>
@@ -32,6 +37,7 @@ export default class Todo extends React.Component {
 Todo.propTypes = {
   tip: PropTypes.string,
   id: PropTypes.number,
+  done: PropTypes.bool,
   handleRemove: PropTypes.func,
   handleToggle: PropTypes.func
 };

@@ -14,3 +14,8 @@ export const toggleTodo = id => ({
   type: constants.todos.TOGGLE_TODO,
   id
 });
+
+export const filterTodos = filter_type => ({
+  type: constants.todos.FILTER_TODOS,
+  filter_type
+});

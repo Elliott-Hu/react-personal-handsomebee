@@ -1,3 +1,5 @@
+require("./todo-input.scss");
+
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -27,7 +29,7 @@ export default class TodoInput extends React.Component {
     let { word } = this.state;
 
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <form className="todo-input" onSubmit={ this.handleSubmit }>
         <input 
           type="input"
           placeholder="你想做什么？"

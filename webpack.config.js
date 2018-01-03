@@ -20,7 +20,6 @@ const config = {
       }
     }, {
       test: /\.scss|\.css$/,
-      // exclude:/node_modules/,
       loaders: ["style-loader", "css-loader", "sass-loader"
       // , 'postcss-loader'
       ]

@@ -1,0 +1,30 @@
+@import "../../assets/scss/mixin.scss";
+
+.todo-input {
+  @include border-box();
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  border: 1px solid #f1f1f4;
+  height: 35px;
+  input {
+    padding: 0 10px;
+    border: none;
+    height: 35px;
+    width: 250px;
+    outline: none;
+    font-size: 12px;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    background: #69be87;
+    border: none;
+    color: #fff;
+    height: 35px;
+    font-size: 12px;
+    width: 50px;
+  }
+}
