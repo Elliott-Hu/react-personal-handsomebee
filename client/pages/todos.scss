@@ -1,6 +1,13 @@
+@import "../assets/scss/variable.scss";
+
 .page-todos {
   .fl {
     float: left;
+    width: 310px;
+    &:before {
+      content: "这是伪类";
+      color: $nf-assertive;
+    }
   }
   .fr {
     float: right;

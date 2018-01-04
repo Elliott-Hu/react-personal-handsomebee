@@ -1,0 +1,12 @@
+@import "../../assets/scss/variable.scss";
+@import "../../assets/scss/mixin.scss";
+
+.message-input {
+  @include border-box();
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  height: 30px;
+  padding: 0 10px;
+}

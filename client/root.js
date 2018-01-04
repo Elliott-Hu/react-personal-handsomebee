@@ -15,7 +15,6 @@ let store = createStore(reducers);
 class App extends React.Component {
   render() {
     return (<div className="app">
-      @@@@ hello react tsx welcome
       <PageTodos />
     </div>);
   }

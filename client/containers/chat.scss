@@ -1,0 +1,11 @@
+@import "../assets/scss/variable.scss";
+@import "../assets/scss/mixin.scss";
+
+.container-chat {
+  @include border-box();
+  width: 600px;
+  background-color: $nf-light;
+  min-height: 600px;
+  padding-bottom: 40px;
+  position: relative;
+}

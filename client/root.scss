@@ -1,13 +1,6 @@
-@import "./assets/scss/variable.scss";
 
 .app {
-  width: 310px;
   margin: 60px;
-  min-height: 100%;
-  &:before {
-    content: "这是伪类";
-    color: $nf-assertive;
-  }
 }
 
 p {

@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "crypto-js": "^3.1.9-1",
     "koa": "^2.4.1",
     "koa-static": "^4.0.2",
     "lodash": "^4.17.4",
@@ -52,6 +53,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
+    "request-promise": "^4.2.2",
     "socket.io": "^2.0.4"
   }
 }
