@@ -1,5 +1,5 @@
 require("normalize.css/normalize.css");
-require("./app.scss");
+require("./root.scss");
 
 import React from "react";
 import ReactDom from "react-dom";
@@ -14,7 +14,7 @@ let store = createStore(reducers);
 
 class App extends React.Component {
   render() {
-    return (<div className={ "app" }>
+    return (<div className="app">
       @@@@ hello react tsx welcome
       <PageTodos />
     </div>);

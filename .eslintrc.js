@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   root: true,
   parser: "babel-eslint",
@@ -57,7 +59,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["service/**/*.js"],
+      files: ["service/**/*.js", "app.js"],
       rules: {
         "lodash/import-scope": ["off"],
         quotes: [

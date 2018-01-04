@@ -1,4 +1,12 @@
 {
+  "presets":["stage-0", [
+    "env", {
+      "targets": {
+        "node": "current",
+        "browsers": ["> 5% in alt-AS"]
+      }
+    }
+  ], "react"],
   "plugins": [
     ["module-alias", [
       { "src": "./client/utils", "expose": "@utils" },
