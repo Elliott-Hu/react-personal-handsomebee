@@ -1,0 +1,39 @@
+@import "../../assets/scss/mixin.scss";
+@import "../../assets/scss/variable.scss";
+
+.message-wrapper {
+  @include border-box();
+  @include clearfix();
+  padding: 10px 20px;
+  >div {
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    >.username {
+      padding: 5px 0;
+      @include text-ellipse();
+    }
+    >.message-desc {
+      padding: 8px 10px;
+      max-width: 300px;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    &.is-mine {
+      float: right;
+      .username {
+        text-align: right;
+      }
+      .message-desc {
+        color: #fff;
+        background-color: $nf-calm;
+      }
+    }
+    &.message-bubble-system {
+      .message-desc {
+        background-color: $nf-sunny;
+        color: #fff;
+      }
+    }
+  }
+}

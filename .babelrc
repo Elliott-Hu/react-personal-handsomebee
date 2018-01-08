@@ -16,7 +16,8 @@
       { "src": "./client/constants", "expose": "@constants" },
       { "src": "./client/reducers", "expose": "@reducers" },
       { "src": "./client/actions", "expose": "@actions" },
-      { "src": "./client/assets/scss", "expose": "@scss" }
+      { "src": "./client/assets/scss", "expose": "@scss" },
+      { "src": "./config", "expose": "@config" }
     ]]
   ]
 }

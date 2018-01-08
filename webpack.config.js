@@ -1,9 +1,21 @@
 const path = require("path");
+const webpack = require("webpack");
 
 const config = {
   entry: { 
-    bundle: "./client/root.js",
-    vendors: ["babel-polyfill", "react", "react-dom", "prop-types", "redux", "react-redux", "classnames"]
+    bundle: [
+      "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000", 
+      "./client/root.js"
+    ],
+    vendors: [
+      "babel-polyfill", 
+      "react", 
+      "react-dom", 
+      "prop-types", 
+      "redux", 
+      "react-redux", 
+      "classnames"
+    ]
   },
   output: {
     filename: "[name].js",
@@ -14,7 +26,7 @@ const config = {
     rules: [{
       test:/\.js$/,
       exclude:/node_modules/,
-      loaders: "babel-loader",
+      loaders: ["babel-loader"],
     }, {
       test: /\.scss|\.css$/,
       loaders: ["style-loader", "css-loader", "sass-loader"
@@ -22,6 +34,9 @@ const config = {
       ]
     }]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
 
 module.exports = config;

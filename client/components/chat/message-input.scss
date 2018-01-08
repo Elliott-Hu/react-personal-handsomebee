@@ -2,11 +2,33 @@
 @import "../../assets/scss/mixin.scss";
 
 .message-input {
+  @include clearfix();
   @include border-box();
   position: absolute;
   width: 100%;
-  bottom: 10px;
+  bottom: 5px;
   left: 0;
   height: 30px;
   padding: 0 10px;
+  text-align: right;
+  >input {
+    vertical-align: top;
+    display: inline-block;
+    width: 400px;
+    height: 30px;
+    padding: 0 10px;
+    margin-right: 20px;
+    margin: 0 20px 0 0;
+    border: none;
+  }
+  >button {
+    vertical-align: top;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    border: none;
+    background-color: $nf-classic;
+    color: #fff;
+    font-size: 14px;
+  }
 }
